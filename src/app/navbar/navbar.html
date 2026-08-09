@@ -1,0 +1,15 @@
+<header class="navbar">
+  <a class="navbar__brand" href="#top">
+    <span class="navbar__mark">G</span>
+    <span class="navbar__title">
+      <span class="navbar__name">{{ site.name }}</span>
+      <span class="navbar__tagline">{{ site.tagline }}</span>
+    </span>
+  </a>
+  <nav class="navbar__links" aria-label="Primary">
+    @for (link of navLinks; track link.href) {
+      <a class="navbar__link" [href]="link.href">{{ link.label }}</a>
+    }
+  </nav>
+  <a class="navbar__cta" href="#join">Join us</a>
+</header>

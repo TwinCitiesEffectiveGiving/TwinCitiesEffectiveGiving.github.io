@@ -28,7 +28,7 @@ Run `ng generate --help` for all available schematics.
 npm run build
 ```
 
-Builds to `dist/twin-cities-effective-giving`. To build with the GitHub Pages base URL (`/TwinCitiesEffectiveGiving/`), including the SPA `404.html` fallback:
+Builds to `dist/twin-cities-effective-giving`. To build with the GitHub Pages base URL (`/`), including the SPA `404.html` fallback:
 
 ```bash
 npm run build:gh-pages
@@ -40,6 +40,14 @@ npm run build:gh-pages
 npm test
 ```
 
+## Customizing the site
+
+Everything a small group needs to edit lives in one file: `src/app/site-config.ts` (org name, tagline, contact email, social links, Google Calendar embed URL).
+
+- **Photos**: drop `.jpg`/`.png` files into `public/images/`. They're served as-is and referenced in `src/app/app.html` as `images/<file>`.
+- **Google Calendar**: publish your calendar (Settings → Make available to public) and paste the iframe embed URL from the calendar's settings into `calendarEmbedUrl` in `site-config.ts`.
+- **Email sign-up**: the form currently opens a `mailto:` to your contact email (zero backend needed). Swap `onSubscribe()` in `src/app/app.ts` to post to a service like Formspree if you want real list capture.
+
 ## Deployment
 
 Deployment is automatic via the `.github/workflows/deploy.yml` GitHub Actions workflow. Every push to `main` builds the site and publishes it to GitHub Pages.
@@ -50,7 +58,7 @@ Deployment is automatic via the `.github/workflows/deploy.yml` GitHub Actions wo
 2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
 3. Push the first commit to `main`. The workflow builds and deploys automatically.
 
-The site is then live at <https://DanielTurnquist.github.io/TwinCitiesEffectiveGiving/>.
+The site is then live at <https://twincitieseffectivegiving.github.io/>.
 
 ## Additional Resources
 

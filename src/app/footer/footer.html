@@ -1,0 +1,33 @@
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__block">
+      <p class="footer__name">{{ site.name }}</p>
+      <p class="footer__description">{{ site.tagline }} — a giving circle for the Twin Cities metro.</p>
+    </div>
+    <nav class="footer__block" aria-label="Footer">
+      <p class="footer__heading">Explore</p>
+      <a class="footer__link" href="#about">About</a>
+      <a class="footer__link" href="#events">Events</a>
+      <a class="footer__link" href="#join">Get Involved</a>
+    </nav>
+    <div class="footer__block">
+      <p class="footer__heading">Follow us</p>
+      <div class="footer__socials">
+        @for (social of site.socials; track social.url) {
+          <a
+            class="footer__social"
+            [href]="social.url"
+            target="_blank"
+            rel="noopener"
+            [attr.aria-label]="social.label"
+          >
+            {{ social.label }}
+          </a>
+        }
+      </div>
+    </div>
+  </div>
+  <p class="footer__bottom">
+    &copy; {{ year }} {{ site.name }}. Made with care in {{ site.address }}.
+  </p>
+</footer>
