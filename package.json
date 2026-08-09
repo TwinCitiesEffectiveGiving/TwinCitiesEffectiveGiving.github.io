@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:gh-pages": "ng build --configuration=gh-pages && node scripts/copy-404.mjs"
+    "build:gh-pages": "ng build --configuration=production,gh-pages && node scripts/copy-404.mjs"
   },
   "private": true,
   "packageManager": "npm@11.17.0",
