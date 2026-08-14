@@ -7,7 +7,7 @@ export const siteConfig = {
   email: 'hello@twincitieseffectivegiving.org',
   address: 'Twin Cities Metro, MN',
   calendarEmbedUrl:
-    'https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID&ctz=America%2FChicago',
+    'https://calendar.google.com/calendar/embed?src=890fe32dd1ab8fe27c6b1acc17153695630951e5f19bcb29614172da8e3b5d03%40group.calendar.google.com&ctz=America%2FChicago',
   socials: [
     {
       label: 'Instagram',
