@@ -22,14 +22,9 @@ export const siteConfig = {
       url: 'https://facebook.com/',
     },
     {
-      label: 'Meetup',
-      handle: 'TC Effective Giving',
-      url: 'https://meetup.com/',
-    },
-    {
-      label: 'YouTube',
-      handle: '@tceffectivegiving',
-      url: 'https://youtube.com/',
+      label: 'Discord',
+      handle: 'Join our server',
+      url: 'https://discord.gg/WzgDwnMHRH',
     },
   ],
 } as const;
