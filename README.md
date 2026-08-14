@@ -46,6 +46,8 @@ Everything a small group needs to edit lives in one file: `src/app/site-config.t
 
 - **Photos**: drop `.jpg`/`.png` files into `public/images/`. They're served as-is and referenced in `src/app/app.html` as `images/<file>`.
 - **Google Calendar**: publish your calendar (Settings → Make available to public) and paste the iframe embed URL from the calendar's settings into `calendarEmbedUrl` in `site-config.ts`.
+- **Upcoming events (live sync)**: the event list on the homepage is pulled from your public Google Calendar at page load — no manual updates. Two things to set in `site-config.ts`: `calendarId` (the `...@group.calendar.google.com` id) and `googleCalendarApiKey`.
+  To get an API key (one-time, free): go to [Google Cloud Console](https://console.cloud.google.com/) → create a project → APIs & Services → Library → enable **Google Calendar API** → Credentials → Create Credentials → **API key**. Restrict the key: **Application restrictions → HTTP referrers** → add `*.github.io/*` and `http://localhost:4200/*`, and **API restrictions → Restrict key → Google Calendar API**. Paste the key into `googleCalendarApiKey`. The calendar must be public and set to show event details for events to appear.
 - **Email sign-up**: the form currently opens a `mailto:` to your contact email (zero backend needed). Swap `onSubscribe()` in `src/app/app.ts` to post to a service like Formspree if you want real list capture.
 
 ## Deployment

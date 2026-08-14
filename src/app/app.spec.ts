@@ -1,10 +1,22 @@
+import { computed } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { App } from './app';
+import { EventsService } from './events.service';
 
 describe('App', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [App],
+      providers: [
+        {
+          provide: EventsService,
+          useValue: {
+            events: computed(() => []),
+            loading: computed(() => false),
+            loadEvents: () => undefined,
+          },
+        },
+      ],
     }).compileComponents();
   });
 

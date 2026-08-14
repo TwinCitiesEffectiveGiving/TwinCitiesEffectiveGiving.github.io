@@ -6,6 +6,8 @@ export const siteConfig = {
     'A giving circle for people in the Twin Cities who want their donations to make the biggest possible difference. We research, discuss, and pool our giving toward the charities that evidence shows help the most.',
   email: 'hello@twincitieseffectivegiving.org',
   address: 'Twin Cities Metro, MN',
+  calendarId: '890fe32dd1ab8fe27c6b1acc17153695630951e5f19bcb29614172da8e3b5d03@group.calendar.google.com',
+  googleCalendarApiKey: '',
   calendarEmbedUrl:
     'https://calendar.google.com/calendar/embed?src=890fe32dd1ab8fe27c6b1acc17153695630951e5f19bcb29614172da8e3b5d03%40group.calendar.google.com&ctz=America%2FChicago',
   socials: [

@@ -69,17 +69,25 @@
       <div class="events">
         <div class="events__list">
           <ul class="event-list">
-            @for (event of upcomingEvents; track event.title) {
-              <li class="event">
-                <div class="event__date">
-                  <span class="event__month">{{ event.month }}</span>
-                  <span class="event__day">{{ event.day }}</span>
-                </div>
-                <div class="event__body">
-                  <p class="event__title">{{ event.title }}</p>
-                  <p class="event__detail">{{ event.detail }}</p>
-                </div>
+            @if (eventsLoading()) {
+              <li class="event event--placeholder">Loading events\u2026</li>
+            } @else if (events().length === 0) {
+              <li class="event event--placeholder">
+                No upcoming events scheduled yet \u2014 check the calendar below or get in touch.
               </li>
+            } @else {
+              @for (event of events(); track event.id) {
+                <li class="event">
+                  <div class="event__date">
+                    <span class="event__month">{{ event.month }}</span>
+                    <span class="event__day">{{ event.day }}</span>
+                  </div>
+                  <div class="event__body">
+                    <p class="event__title">{{ event.title }}</p>
+                    <p class="event__detail">{{ event.detail }}</p>
+                  </div>
+                </li>
+              }
             }
           </ul>
         </div>

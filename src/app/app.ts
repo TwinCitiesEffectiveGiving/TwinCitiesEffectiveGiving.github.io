@@ -1,8 +1,9 @@
-import { Component, inject } from '@angular/core';
+import { Component, type OnInit, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DomSanitizer, type SafeResourceUrl } from '@angular/platform-browser';
 import { Navbar } from './navbar/navbar';
 import { Footer } from './footer/footer';
+import { EventsService } from './events.service';
 import { siteConfig } from './site-config';
 
 @Component({
@@ -11,15 +12,22 @@ import { siteConfig } from './site-config';
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
-export class App {
+export class App implements OnInit {
   private readonly sanitizer = inject(DomSanitizer);
+  private readonly eventsService = inject(EventsService);
 
   protected readonly site = siteConfig;
   protected readonly calendarUrl: SafeResourceUrl =
     this.sanitizer.bypassSecurityTrustResourceUrl(siteConfig.calendarEmbedUrl);
   protected readonly mailtoLink = `mailto:${siteConfig.email}`;
+  protected readonly events = this.eventsService.events;
+  protected readonly eventsLoading = this.eventsService.loading;
 
   protected email = '';
+
+  ngOnInit(): void {
+    this.eventsService.loadEvents();
+  }
 
   protected readonly pillars = [
     {
@@ -36,27 +44,6 @@ export class App {
       title: 'Local community',
       description:
         'Monthly meetups for conversation, guest speakers, and deciding together where our next grant goes.',
-    },
-  ];
-
-  protected readonly upcomingEvents = [
-    {
-      month: 'Aug',
-      day: '14',
-      title: 'Monthly Giving Circle Meetup',
-      detail: '6:30pm — Discuss candidates for our next grant',
-    },
-    {
-      month: 'Sep',
-      day: '04',
-      title: 'Grant Decision Night',
-      detail: '7:00pm — Vote on this cycle\u2019s donation',
-    },
-    {
-      month: 'Sep',
-      day: '18',
-      title: 'Guest Speaker: Local Nonprofit Leader',
-      detail: '6:30pm — Inside the work behind the numbers',
     },
   ];
 
