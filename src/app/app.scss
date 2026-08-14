@@ -87,7 +87,7 @@ main {
 /* ---------- Hero ---------- */
 
 .hero {
-  background: linear-gradient(160deg, var(--paper) 0%, #eef4ee 100%);
+  background: linear-gradient(160deg, var(--paper) 0%, #e4e6dc 100%);
   padding: 4.5rem 2rem 5rem;
 }
 
@@ -199,7 +199,7 @@ main {
 }
 
 .pillar {
-  background: #fff;
+  background: var(--paper-soft);
   border: 1px solid var(--border);
   border-radius: 1.25rem;
   padding: 1.75rem;
@@ -239,7 +239,7 @@ main {
   display: flex;
   gap: 1.1rem;
   align-items: flex-start;
-  background: #fff;
+  background: var(--paper-soft);
   border: 1px solid var(--border);
   border-radius: 1.25rem;
   padding: 1.25rem;
@@ -292,7 +292,7 @@ main {
 }
 
 .events__calendar {
-  background: #fff;
+  background: var(--paper-soft);
   border: 1px solid var(--border);
   border-radius: 1.25rem;
   padding: 1.5rem;
@@ -333,7 +333,7 @@ main {
   flex-direction: column;
   padding: 0.7rem 1.1rem;
   border-radius: 1rem;
-  background: #fff;
+  background: var(--paper-soft);
   border: 1px solid var(--border);
   text-decoration: none;
   transition: border-color 0.15s ease, transform 0.15s ease;
@@ -356,7 +356,7 @@ main {
 }
 
 .signup {
-  background: #fff;
+  background: var(--paper-soft);
   border: 1px solid var(--border);
   border-radius: 1.5rem;
   padding: 2rem;
