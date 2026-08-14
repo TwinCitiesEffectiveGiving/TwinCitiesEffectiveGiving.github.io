@@ -13,8 +13,8 @@ export const siteConfig = {
   socials: [
     {
       label: 'Instagram',
-      handle: '@tceffectivegiving',
-      url: 'https://instagram.com/',
+      handle: '@tc.effectivegiving',
+      url: 'https://www.instagram.com/tc.effectivegiving/',
     },
     {
       label: 'Facebook',
