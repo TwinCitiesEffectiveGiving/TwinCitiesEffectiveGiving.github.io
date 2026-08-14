@@ -147,8 +147,8 @@ main {
 }
 
 .hero__media img {
-  border-radius: 1.5rem;
-  box-shadow: 0 24px 60px -24px rgb(20 43 35 / 0.4);
+  width: min(100%, 520px);
+  margin-inline: auto;
 }
 
 /* ---------- About ---------- */
