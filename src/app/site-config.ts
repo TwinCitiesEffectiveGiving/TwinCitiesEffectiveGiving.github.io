@@ -4,7 +4,7 @@ export const siteConfig = {
   tagline: 'Doing good, effectively',
   description:
     'A giving circle for people in the Twin Cities who want their donations to make the biggest possible difference. We research, discuss, and pool our giving toward the charities that evidence shows help the most.',
-  email: 'hello@twincitieseffectivegiving.org',
+  email: 'begleyre@gmail.com',
   address: 'Twin Cities Metro, MN',
   calendarId: '890fe32dd1ab8fe27c6b1acc17153695630951e5f19bcb29614172da8e3b5d03@group.calendar.google.com',
   googleCalendarApiKey: 'AIzaSyBClO35VDgxCaFvamJD2X4VxCEQ7v44S84',
